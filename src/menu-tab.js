@@ -15,8 +15,6 @@ const menuLoader = function () {
     tortacosHeader.textContent = "This is our bowl catered to us by the tasy restaurant TorTacos"
     birriaHeader.textContent = "This is our birria catered to us by the tasty restaurant TorTacos"
     
-    homeTab()
-    
     //appends all the elements to the DOM
     contentId.appendChild(menuTitle)
     contentId.appendChild(tortacosHeader)
