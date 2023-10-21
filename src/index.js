@@ -1,23 +1,26 @@
 import {firstLoad} from "./first-load.js"
+import {menuLoader} from "./menu-tab.js"
+
 
 const contentDiv = document.querySelector("#content")
 
-//creates tabs at top of page
+//creates navigation tabs at the top of the page
 const contactTab = document.createElement("button")
 const menuTab = document.createElement("button")
 contactTab.textContent += "Contact Us"
 menuTab.textContent += "Menu"
-contentDiv.appendChild(contactTab)
-contentDiv.appendChild(menuTab)
 
 
+document.body.prepend(contactTab)
+document.body.prepend(menuTab)
 
-menuTab.addEventListener('click', {
-    
+firstLoad()
+
+
+menuTab.addEventListener('click', function() {
+    contentDiv.innerHTML = ""
+    menuLoader()
 })
 
 
 
-firstLoad()
-
-console.log("hello world")
